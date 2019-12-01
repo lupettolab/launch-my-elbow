@@ -10,7 +10,7 @@ int main()
     std::cout << "Hello Giulia!!!" << std::endl;
 
     Image img(32, 32);
-    std::cout << "img width: " << img.getWidth() << ", height: " << img.getHeigth() << std::endl;
+    std::cout << "img width: " << img.getWidth() << ", height: " << img.getHeight() << std::endl;
 
     return 0;
 }

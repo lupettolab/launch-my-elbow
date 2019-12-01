@@ -37,11 +37,11 @@ public:
     /// getters
 
     int getWidth() const;
-    int getHeigth() const;
+    int getHeight() const;
 
 private:
     int _width;
-    int _heigth;
+    int _height;
     std::vector<float> _data;
 };
 

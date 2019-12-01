@@ -6,14 +6,14 @@
 
 Image::Image()
 : _width()
-, _heigth()
+, _height()
 , _data()
 {
 }
 
 Image::Image(int width, int height)
 : _width(width)
-, _heigth(height)
+, _height(height)
 , _data()
 {}
 
@@ -30,9 +30,9 @@ int Image::getWidth() const
     return _width;
 }
 
-int Image::getHeigth() const
+int Image::getHeight() const
 {
-    return 0;
+    return _height;
 }
 
 Image &Image::operator=(const Image &that)

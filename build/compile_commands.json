@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/mattia/Documents/lupettolab/build",
+  "command": "/usr/bin/clang++   -I/Users/mattia/Documents/lupettolab/include  -O3 -DNDEBUG   -std=gnu++11 -o CMakeFiles/LaunchMyElbow.dir/source/main.cpp.o -c /Users/mattia/Documents/lupettolab/source/main.cpp",
+  "file": "/Users/mattia/Documents/lupettolab/source/main.cpp"
+},
+{
+  "directory": "/Users/mattia/Documents/lupettolab/build",
+  "command": "/usr/bin/clang++  -DImageLib_EXPORTS -I/Users/mattia/Documents/lupettolab/include  -O3 -DNDEBUG -fPIC   -std=gnu++11 -o CMakeFiles/ImageLib.dir/source/Image.cpp.o -c /Users/mattia/Documents/lupettolab/source/Image.cpp",
+  "file": "/Users/mattia/Documents/lupettolab/source/Image.cpp"
+}
+]

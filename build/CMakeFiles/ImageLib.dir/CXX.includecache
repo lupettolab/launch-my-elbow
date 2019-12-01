@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Image.h
+vector
+-
+
+/Users/mattia/Documents/lupettolab/source/Image.cpp
+Image.h
+/Users/mattia/Documents/lupettolab/source/Image.h
+
