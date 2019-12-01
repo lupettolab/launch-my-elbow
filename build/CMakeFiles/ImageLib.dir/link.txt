@@ -1,1 +1,0 @@
-/usr/bin/clang++ -O3 -DNDEBUG -dynamiclib -Wl,-headerpad_max_install_names  -o libImageLib.dylib -install_name /Users/mattia/Documents/lupettolab/build/libImageLib.dylib CMakeFiles/ImageLib.dir/source/Image.cpp.o 

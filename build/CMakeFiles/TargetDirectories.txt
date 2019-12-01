@@ -1,8 +1,0 @@
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/install/local.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/list_install_components.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/rebuild_cache.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/edit_cache.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/LaunchMyElbow.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/install/strip.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/install.dir
-/Users/mattia/Documents/lupettolab/build/CMakeFiles/ImageLib.dir
