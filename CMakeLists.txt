@@ -1,7 +1,7 @@
 project("LaunchMyElbow")
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Configuration types
@@ -20,7 +20,7 @@ set(CMAKE_DEBUG_POSTFIX "d")
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # build as library
-add_library(ImageLib SHARED source/Image.cpp)
+add_library(ImageLib SHARED source/Image.cpp source/ImageTypes.cpp source/ImageImpl.cpp source/ImageBase.cpp)
 
 add_executable(LaunchMyElbow source/main.cpp)
 target_link_libraries(LaunchMyElbow ImageLib)

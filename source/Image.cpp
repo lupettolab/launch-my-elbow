@@ -4,51 +4,48 @@
 
 #include "Image.h"
 
-Image::Image()
-: _width()
-, _height()
-, _data()
+Image::Image(DType dtype)
+: _dtype(dtype)
+, _img(nullptr)
 {
 }
 
-Image::Image(int width, int height)
-: _width(width)
-, _height(height)
-, _data()
-{}
-
-// TODO(Giulia)
-Image::Image(const Image &that)
-{}
-
-// TODO(Giulia)
-Image::Image(Image&& that)
-{}
-
-int Image::getWidth() const
+Image::Image(DType dtype, int width, int height)
+: _dtype(dtype)
 {
-    return _width;
+    auto imgCreator = [&](auto type_wrapper){
+        using deduced_type = typename decltype(type_wrapper)::T;
+        _img = std::make_unique<ImageImpl<deduced_type>>(width, height);
+    };
+    typeSwitcher(_dtype, imgCreator);
 }
 
-int Image::getHeight() const
+int Image::width() const
 {
-    return _height;
+    return _img->width();
 }
 
-Image &Image::operator=(const Image &that)
+int Image::height() const
 {
-    // TODO: fill in
-    return *this;
+    return _img->height();
 }
 
-Image &Image::operator=(Image &&that)
-{
-    // TODO:: fill in
-    return *this;
+DType Image::dtype() const {return _dtype;}
+
+
+std::string Image::prettyType() const {
+    std::string repr;
+    auto getRepr = [this, &repr](auto dtype){
+        const auto& idd = typeid(typename decltype(dtype)::T);
+        repr = std::string(idd.name());
+    };
+    typeSwitcher(_dtype, getRepr);
+    return repr;
+;
 }
+
 
 Image::~Image()
 {
-    //TODO: do we need to do anything here?
 }
 

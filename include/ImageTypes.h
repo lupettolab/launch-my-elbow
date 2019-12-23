@@ -57,6 +57,21 @@ LUPETTOLAB_DEFINE_IMAGE_TYPE(ltype::int32, DType::INT32);
 LUPETTOLAB_DEFINE_IMAGE_TYPE(ltype::float32, DType::FLOAT);
 LUPETTOLAB_DEFINE_IMAGE_TYPE(ltype::float64, DType::DOUBLE);
 
+template<DType dtype = DType::UNSUPPORTED>
+struct DTypeConverter : public std::false_type { using type = void; };
+
+/// struct specialization
+#define LUPETTOLAB_DEFINE_IMAGE_DTYPE(enumtype, t)\
+template<> struct DTypeConverter<enumtype>: public std::true_type { using type = t; }
+
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::UINT8, ltype::uint8);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::UINT16, ltype::uint16);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::UINT32, ltype::uint32);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::INT8, ltype::int8);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::INT16, ltype::int16);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::INT32, ltype::int32);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::FLOAT, ltype::float32);
+LUPETTOLAB_DEFINE_IMAGE_DTYPE(DType::DOUBLE, ltype::float64);
 
 template<typename WrappedType>
 struct TypeWrapper
